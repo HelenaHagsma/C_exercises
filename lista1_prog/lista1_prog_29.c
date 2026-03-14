@@ -1,19 +1,18 @@
 #include <stdio.h>
 
 int main() {
-    int graus, m, s;
-    double gd, rad;
+    float g, m, s, r;
     printf("Digite os graus: ");
-    scanf("%d", &graus);
+    scanf("%f", &g);
     printf("Digite os minutos: ");
-    scanf("%d", &m);
+    scanf("%f", &m);
     printf("Digite os segundos: ");
-    scanf("%d", &s);
+    scanf("%f", &s);
 
-    gd = graus + m / 60 + s / 3600;
+    g = g + ((m + s / 60) /60);
 
-    rad = gd * 3.1415 / 180;
+    r = 2 * 3.1415 * g / 360;
 
-    printf("O angulo em radianos e: %.2f\n", rad);
+    printf("O angulo em radianos e: %.2f\n", r);
     return 0;
 }
